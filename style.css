@@ -77,6 +77,22 @@ h3,h4,h5,h6{
     display: none;
 }
 
+.error{
+    font-size: 13px;
+    position: absolute;
+    top: 55px;
+    left: 20px;
+    color: #e74c3c;
+}
+
+.message{
+    font-size: 13px;
+    position: absolute;
+    top: 125px;
+    left: 20px;
+    color: #e74c3c;
+}
+
 img{
     max-width: 100%;
     vertical-align: middle;
@@ -633,6 +649,7 @@ button{
 .contact-form .input-group{
     width: 100%;
     margin-bottom: 30px;
+    position: relative;
 }
 
 

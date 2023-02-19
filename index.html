@@ -1,13 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="./style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+        integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
+
 <body>
     <!-- Main Start -->
     <div class="main">
@@ -52,7 +57,7 @@
                         <div class="img-box">
                             <img src="./assets/profile.jpg" alt="">
                         </div>
-                        
+
                     </div>
                 </div>
             </div>
@@ -68,7 +73,7 @@
                 <div class="row">
                     <div class="section-title">
                         <h2>about me</h2>
-                        
+
                     </div>
                 </div>
 
@@ -79,7 +84,11 @@
                         </div>
                     </div>
                     <div class="about-text">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto nisi, maiores eius quod, numquam quidem accusantium sit neque dolore repellendus corporis quibusdam porro nihil quisquam adipisci labore natus veritatis velit impedit pariatur non veniam quam. Quae repellendus fugiat repellat, animi laborum eaque blanditiis et iure optio explicabo eius vitae sunt.</p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto nisi, maiores eius quod,
+                            numquam quidem accusantium sit neque dolore repellendus corporis quibusdam porro nihil
+                            quisquam adipisci labore natus veritatis velit impedit pariatur non veniam quam. Quae
+                            repellendus fugiat repellat, animi laborum eaque blanditiis et iure optio explicabo eius
+                            vitae sunt.</p>
                         <h3>skills</h3>
                         <div class="skills">
                             <div class="skill-item">html</div>
@@ -106,10 +115,11 @@
                                     <span class="date">2019 - 22</span>
                                     <h4>Diploma in Computer
                                         Engineering - <span>GPTC Nedumangad</span></h4>
-                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae est tempora, perferendis natus sequi dolorum? </p>
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae est tempora,
+                                        perferendis natus sequi dolorum? </p>
                                 </div>
 
-                                
+
                                 <!-- <div class="timeline-item">
                                     <span class="date">2013 - 16</span>
                                     <h4>bachelor of technology - <span>todfod university</span></h4>
@@ -135,7 +145,8 @@
                                     <span class="date">5 Months</span>
 
                                     <h4>juniour programmer- <span>Amritha Campus</span></h4>
-                                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Explicabo rem, repellendus quibusdam dolor nobis corporis?</p>
+                                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Explicabo rem,
+                                        repellendus quibusdam dolor nobis corporis?</p>
                                 </div>
                             </div>
                         </div>
@@ -144,7 +155,7 @@
 
                         <a href="cv.pdf" target="_blank" class="btn">download cv</a>
                         <a href="#contact" class="btn link-item">contact me</a>
- 
+
 
                     </div>
                 </div>
@@ -173,7 +184,7 @@
                         </div>
                         <h3 class="portfoilo-item-title">Instagram Clone website</h3>
                         <button type="button" class="btn view-project-btn">view project</button>
-                      
+
                     </div>
 
                     <div class="portfolio-item">
@@ -182,7 +193,7 @@
                         </div>
                         <h3 class="portfoilo-item-title">Swiggy Clone website</h3>
                         <button type="button" class="btn view-project-btn">view project</button>
-                      
+
                     </div>
 
 
@@ -192,7 +203,7 @@
                         </div>
                         <h3 class="portfoilo-item-title">responsive Google Store Clone</h3>
                         <button type="button" class="btn view-project-btn">view project</button>
-                      
+
                     </div>
 
 
@@ -202,7 +213,7 @@
                         </div>
                         <h3 class="portfoilo-item-title">education course website</h3>
                         <button type="button" class="btn view-project-btn">view project</button>
-                      
+
                     </div>
 
 
@@ -230,25 +241,37 @@
 
                 <div class="row">
                     <div class="contact-form">
-                        <form>
+                        <form id="contact-us">
                             <div class="row">
 
                                 <div class="input-group">
-                                    <input type="text" class="input-control" placeholder="Name" required>
-                                </div>
-
-                                
-                                <div class="input-group">
-                                    <input type="text" class="input-control" placeholder="Email" required>
+                                    <input type="text" id="name" name="name" class="input-control" placeholder="Name" onkeyup="validateName()"
+                                        >
+                                    <span class="error" id="name-err"></span>
                                 </div>
 
 
                                 <div class="input-group">
-                                    <input type="text" class="input-control" placeholder="Subject" required>
+                                    <input type="text" name="email" id="email" class="input-control" placeholder="Email" onkeyup="validateEmail()" >
+                                    <span class="error" id="email-err"></span>
                                 </div>
-                                
+
+
                                 <div class="input-group">
-                                    <textarea type="text" class="input-control" placeholder="Message" required></textarea>
+                                    <input type="text" name="subject" class="input-control" placeholder="Subject"
+                                    onkeyup="validateSubject()"
+                                    id="subject"
+
+                                        >
+                                        <span class="error" id="subject-err"></span>
+                                </div>
+
+                                <div class="input-group">
+                                    <textarea type="text" name="message" class="input-control" placeholder="Message"
+                                    onkeyup="validateMessage()"
+                                    id="message"
+                                        ></textarea>
+                                        <span class="error message" id="message-err"></span>
                                 </div>
 
                                 <div class="submit-btn">
@@ -256,7 +279,7 @@
                                 </div>
 
 
-                                 
+
 
 
                             </div>
@@ -297,5 +320,32 @@
     </div>
     <!-- Main End -->
     <script src="./script.js"></script>
+    <script>
+
+
+$("#contact-us").submit((e) => {
+    e.preventDefault();
+
+    // if(validateName() && validateEmail() && validateSubject() && validateMessage()){
+        $.ajax({
+            url: "https://script.google.com/macros/s/AKfycbxWLR2XgjOw1wrY_UnWwYT7zBS_fdvMry5wYZAuj320BCQ0C-0BmiyBq7HoxyKbhe3AIQ/exec",
+            data: $("#contact-us").serialize(),
+            method: "post",
+            success: function (response) {
+                alert("Form submitted successfully")
+                window.location.reload()
+                //window.location.href="https://google.com"
+            },
+            error: function (err) {
+                alert("Something Error")
+    
+            }
+        })
+    // }
+   
+})
+
+    </script>
 </body>
+
 </html>
