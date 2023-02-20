@@ -434,7 +434,7 @@
 $("#contact-us").submit((e) => {
     e.preventDefault();
 
-    // if(validateName() && validateEmail() && validateSubject() && validateMessage()){
+    if(validateName() && validateEmail() && validateSubject() && validateMessage()){
         $.ajax({
             url: "https://script.google.com/macros/s/AKfycbxWLR2XgjOw1wrY_UnWwYT7zBS_fdvMry5wYZAuj320BCQ0C-0BmiyBq7HoxyKbhe3AIQ/exec",
             data: $("#contact-us").serialize(),
@@ -449,7 +449,7 @@ $("#contact-us").submit((e) => {
     
             }
         })
-    // }
+    }
    
 })
 

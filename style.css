@@ -903,6 +903,10 @@ button{
         order: -1;
         margin-bottom: 15px;
     }
+
+    .skills{
+        width: 100%;
+    }
 }
 
 @media(max-width:575px){
