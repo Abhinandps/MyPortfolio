@@ -1,6 +1,8 @@
 
 //------------- Form Validation--------------
 
+
+
 function validateName() {
     const name = document.querySelector("#name");
     const nameError = document.querySelector("#name-err");
@@ -41,10 +43,12 @@ function validateSubject() {
     let length = subject.value.length;
     if(length>20 && subject.value){
         subject.style.borderColor = "#e74c3c";
+        subjectError.style.color="#e74c3c";
         subjectError.innerHTML ="Maximum Character";
     }
     else{
         subject.style.borderColor = "transparent";
+        subjectError.style.color="#34495e";
         subjectError.innerHTML=  `${length}/20 (Max Character 20)`;
     }
 
@@ -60,10 +64,12 @@ function validateMessage() {
     let length = message.value.length;
     if(length>100 && message.value){
         message.style.borderColor = "#e74c3c";
+        messageError.style.color="#e74c3c";
         messageError.innerHTML ="Maximum Character";
     }
     else{
         message.style.borderColor = "transparent";
+        messageError.style.color="#34495e";
         messageError.innerHTML=  `${length}/100 (Max Character 100)`;
     }
 

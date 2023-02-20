@@ -246,6 +246,17 @@ button{
  }
 
 
+
+ @keyframes fillBars{
+    from{
+        width: 0;
+    }
+    to{
+        width: 100%;
+    }
+ }
+
+
 /* Header  */
 
 .header{
@@ -720,6 +731,128 @@ button{
 }
 
 
+
+
+
+/* Service Section  */
+
+
+.service-section{
+    padding-bottom:50px ;
+}
+
+.service-item{
+    width: calc((100% / 3 ) - 30px);
+    margin: 0 15px 30px;
+}
+
+.service-item-card{
+    padding: 40px;
+    background-color: var(--white-alpha-25);
+    border: 1px solid var(--white-alpha-40);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; 
+    transition: all 0.3s;
+}
+.service-item-card:hover{
+    background-color: var(--main-color);
+    border: 1px solid var(--white-alpha-40);
+    color: white;
+    cursor: pointer;
+
+}
+
+.service-item-card a{
+    color: #6b6b6b;
+    transition: color 0.3s;
+}
+
+.service-item-card:hover a{
+    color: #d1d1d1;
+}
+
+.service-item-card .service-icon{
+    font-size: 35px;
+}
+
+
+.service-item-card h3{
+    font-size: 20px;
+    text-transform: capitalize;
+    margin: 10px 0;
+}
+
+
+
+
+
+/* Skills Section  */
+
+.skills{
+    width: 50%;
+    max-width: 600px;
+    padding: 0 20px;
+}
+
+
+.skill-name{
+    font-size: 18px;
+    font-weight: 700;
+    color: #353535;
+    text-transform: uppercase;
+    margin: 20px 0;
+}
+
+.skill-bar{
+    height: 14px;
+    background-color: var(--white-alpha-40);
+    border-radius: 20px;
+    border: 1px solid var(--white-alpha-25);
+}
+
+.skill-per{
+    height: 14px;
+    background-color: var(--main-color);
+    position: relative;
+    border-radius: 20px 0 0 20px;
+    animation: fillBars 2.5s 1;
+}
+
+
+.skill-per::before{
+    content: attr(per);
+    position: absolute;
+    padding: 4px 6px;
+    background-color: #f1f1f1;
+    border-radius: 4px;
+    font-size: 12px;
+    top: -35px;
+    right: 0;
+    transform: translateX(50%);
+}
+
+
+.skill-per::after{
+    content: "";
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background-color: #f1f1f1;
+    top: -15px;
+    right: 0;
+    transform: translateX(50%) rotate(45deg);
+    border-radius: 2px;
+}
+
+
+
+
+
+
+
 @media(max-width:991px){
     .container{
         padding: 0;
@@ -743,6 +876,9 @@ button{
     .portfolio-item{
         width: calc(50% - 30px);
     }
+    .service-item{
+        width: calc(50% - 30px);
+    }
 }
 
 @media(max-width:767px){
@@ -758,6 +894,9 @@ button{
     }
 
     .portfolio-item{
+        width: calc(100% - 30px);
+    }
+    .service-item{
         width: calc(100% - 30px);
     }
     .contact-info{
