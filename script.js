@@ -6,7 +6,7 @@
 function validateName() {
     const name = document.querySelector("#name");
     const nameError = document.querySelector("#name-err");
-    if (!name.value.match((/^[a-zA-Z]+ [a-zA-Z]+ [a-zA-Z]$/))) {
+    if (!name.value.match((/^[a-zA-Z]+ [a-zA-Z]+ [a-zA-Z]+$/)) ) {
         name.style.borderColor = "#e74c3c";
         nameError.innerHTML = "Please enter a valid name";
         return false;
