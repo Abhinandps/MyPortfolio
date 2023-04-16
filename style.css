@@ -22,6 +22,20 @@
     --backdrop-filter-blur:blur(5px);
 }
 
+.dark-theme{
+    --main-color:#e02f6b;
+    --blue: #2020fd;
+    --blue-dark: #e9e9e9;
+    --orange:#ffa500;
+    --green-yellow:#020202;
+    --pink-light:#050505;
+    --cyan-light:#030303;
+    --white:#ffffff;
+    --white-alpha-40:rgba(182, 182, 182, 0.123);
+    --white-alpha-25:rgba(32, 32, 32, 0.233);
+    --backdrop-filter-blur:blur(5px);
+}
+
 
 /* Global Settings  */
 *{
@@ -377,6 +391,60 @@ button{
     background-color: transparent;
 }
 
+
+.toggle {
+    position: absolute;
+    top: 25px;
+    left: 10px;
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+	max-width: 140px;
+    height: 50px;
+    border-radius:50px;
+    background: var(--white-alpha-25);
+}
+
+.toggle span {
+	margin: 0 0.5rem;
+}
+
+.toggle input[type="checkbox"] {
+	height: 0;
+	width: 0;
+	visibility: hidden;
+}
+
+.toggle input[type="checkbox"]:checked + label {
+	background: teal;
+}
+
+.toggle input[type="checkbox"]:checked + label:after {
+	left: calc(100% - 2px);
+	transform: translateX(-100%);
+}
+
+.toggle label {
+	cursor: pointer;
+	width: 75px;
+	height: 34px;
+	background: rgba(0, 0, 0, 0.27);
+	display: block;
+	border-radius: 40px;
+	position: relative;
+}
+
+.toggle label:after {
+	content: "";
+	position: absolute;
+	top: 2px;
+	left: 2px;
+	width: 30px;
+	height: 30px;
+	background: #fff;
+	border-radius: 40px;
+	transition: 0.3s;
+}
 
 
 
@@ -875,7 +943,7 @@ button{
 .skill-name{
     font-size: 18px;
     font-weight: 700;
-    color: #353535;
+    color: var(--blue-dark);
     text-transform: uppercase;
     margin: 20px 0;
 }
@@ -890,7 +958,7 @@ button{
 .skill-per{
     height: 8px;
     /* background-color: var(--main-color); */
-    background:linear-gradient(30deg,var(--cyan-light),var(--main-color));
+    background:linear-gradient(30deg,#aef1ee,var(--main-color));
     position: relative;
     border-radius: 20px 0 0 20px;
     animation: fillBars 2.5s 1;
@@ -899,6 +967,7 @@ button{
 
 .skill-per::before{
     content: attr(per);
+    color:#272727;
     position: absolute;
     padding: 4px 6px;
     background-color: #f1f1f1;
@@ -912,6 +981,7 @@ button{
 
 .skill-per::after{
     content: "";
+    
     position: absolute;
     width: 10px;
     height: 10px;

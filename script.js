@@ -57,7 +57,7 @@ function validateSubject() {
     }
     else{
         subject.style.borderColor = "transparent";
-        subjectError.style.color="#34495e";
+        subjectError.style.color="#617488";
         subjectError.innerHTML=  `${length}/20 (Max Character 20)`;
         return true;
     }
@@ -84,7 +84,7 @@ function validateMessage() {
     }
     else{
         message.style.borderColor = "transparent";
-        messageError.style.color="#34495e";
+        messageError.style.color="#617488";
         messageError.innerHTML=  `${length}/100 (Max Character 100)`;
         return true;
     }
@@ -160,6 +160,37 @@ tabsContainer.addEventListener("click", (e) => {
         console.log(target);
         aboutSection.querySelector(".tab-content.active").classList.remove("active");
         aboutSection.querySelector(target).classList.add("active");
+    }
+})
+
+
+
+
+//--------- Dark Mode------------
+
+let toggleSwitch = document.querySelector('#toggle-switch')
+let localData = localStorage.getItem('theme')
+let storedValue = localStorage.getItem('toggleValue')
+
+if(localData === 'light'){
+    document.body.classList.remove('dark-theme')
+}
+else if(localData === 'dark' && storedValue){
+    toggleSwitch.checked = JSON.parse(storedValue)
+    document.body.classList.add('dark-theme')
+}
+
+toggleSwitch.addEventListener('change',(e)=>{
+    document.body.classList.toggle('dark-theme')
+    let isChecked = e.target.checked; 
+    if(document.body.classList.contains('dark-theme')){
+        localStorage.setItem('theme','dark')
+	    localStorage.setItem('toggleValue', isChecked); 
+
+    }
+    else{
+        localStorage.setItem('theme','light')
+        localStorage.setItem('toggleValue', isChecked)
     }
 })
 
