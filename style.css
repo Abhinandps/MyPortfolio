@@ -246,6 +246,80 @@ button{
  }
 
 
+ @keyframes zoomInOut{
+    0%,100%{
+        transform: scale(0.5);
+    }
+    50%{
+        transform: scale(1);
+    }
+ }
+
+ @keyframes bounceTop{
+    0%,100%{
+        transform: translateY(-50px);
+    }
+    50%{
+        transform: translateY(0px);
+    }
+ }
+
+
+/* background circles  */
+.bg-circles{
+    position: fixed;
+    top: 0;
+    height: 100%;
+    max-width: 1200px;
+    width: calc(100% - 30px);
+    left: 50%;
+    transform:translateX(-50%) ;
+    /* z-index: 1; */
+}
+
+.bg-circles div{
+    position: absolute;
+    border-radius: 50%;
+}
+
+.bg-circles .circle-1{
+    width: 60px;
+    height: 60px;
+    background: var(--blue);
+    left: 5%;
+    top: 10%;
+    opacity: 0.3;
+    animation: zoomInOut 8s linear infinite;
+}
+
+.bg-circles .circle-2{
+    width: 80px;
+    height: 80px;
+    background: var(--main-color);
+    left: 30%;
+    top: 50%;
+    opacity: 0.4;
+    animation: bounceTop 5s ease-in-out infinite;
+}
+.bg-circles .circle-3{
+    width: 120px;
+    height: 120px;
+    background: var(--white);
+    right: -60px;
+    top: 40%;
+    opacity: 0.6;
+    /* animation: bounceTop 5s ease-in-out infinite; */
+}
+.bg-circles .circle-4{
+    width: 50px;
+    height: 50px;
+    background: var(--orange);
+    left: -30px;
+    top: 80%;
+    opacity: 0.6;
+    /* animation: bounceTop 5s ease-in-out infinite; */
+}
+
 
  @keyframes fillBars{
     from{
